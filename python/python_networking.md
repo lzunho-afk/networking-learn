@@ -7,5 +7,5 @@ o endereçamento e a estrutura básica da comunicação cliente-servidor.
 
 Descrição dos scripts:
 
-- [](hostname.py): Apresenta o nome da máquina rodando a instância;
-- [](external_host_addr.py): Apresenta o endereço IP a partir de um hostname
+- [hostname.py](./hostname.py): Apresenta o nome da máquina rodando a instância;
+- [external_host_addr.py](./external_host_addr.py): Apresenta o endereço IP a partir de um hostname
