@@ -7,9 +7,9 @@ o endereçamento e a estrutura básica da comunicação cliente-servidor.
 
 Descrição dos scripts:
 
-- [hostname.py](./client_server/hostname.py): Apresenta o nome da máquina rodando a instância
-- [external_host_addr.py](./client_server/external_host_addr.py): Apresenta o endereço IP a partir de um hostname
-- [ip_convert.py](./client_server/ip_convert.py): Converte o endereço de IPv4 para hexadecimal (empacotamento)
-- [service_name.py](./client_server/service_name.py): Devolve o nome do serviço rodando no endereço e porta especificados
-- [get_http.py](./client_server/get_http.py): Solicita um arquivo de um servidor HTTP (GET)
-- [change_sock_buffsize.py](./client_server/change_sock_buffsize.py): Altera o valor padrão de buffer do socket utilizando `setsockopt()`
+- [hostname.py](./client_server/hostname.py): Apresenta o nome da máquina rodando a instância.
+- [external_host_addr.py](./client_server/external_host_addr.py): Apresenta o endereço IP a partir de um hostname.
+- [ip_convert.py](./client_server/ip_convert.py): Converte o endereço de IPv4 para hexadecimal (empacotamento).
+- [service_name.py](./client_server/service_name.py): Devolve o nome do serviço rodando no endereço e porta especificados.
+- [get_http.py](./client_server/get_http.py): Solicita um arquivo de um servidor HTTP (GET).
+- [change_sock_buffsize.py](./client_server/change_sock_buffsize.py): Altera o valor padrão de buffer do socket utilizando `setsockopt()`, que recebe três argumentos de entrada, o `level` (constante do socket), o `optname` (nome da opção) e o `value` (valor correspondente).
