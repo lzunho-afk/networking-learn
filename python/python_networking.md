@@ -13,3 +13,4 @@ Descrição dos scripts:
 - [service_name.py](./client_server/service_name.py): Devolve o nome do serviço rodando no endereço e porta especificados.
 - [get_http.py](./client_server/get_http.py): Solicita um arquivo de um servidor HTTP (GET).
 - [change_sock_buffsize.py](./client_server/change_sock_buffsize.py): Altera o valor padrão de buffer do socket utilizando `setsockopt()`, que recebe três argumentos de entrada, o `level` (constante do socket), o `optname` (nome da opção) e o `value` (valor correspondente).
+- [cg_blocking_mode.py](./client_server/cg_blocking_mode.py): Altera o modo do socket para `non-blocking`. A necessidade disso pode se dar pelo fato de que os sockets TCP são configurados por padrão em modo de bloqueio (`blocking`), o que significa que o controle não é retornado para o programa até que determinada operação tenha terminado.
