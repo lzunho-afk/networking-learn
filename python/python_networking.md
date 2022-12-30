@@ -12,3 +12,4 @@ Descrição dos scripts:
 - [ip_convert.py](./client_server/ip_convert.py): Converte o endereço de IPv4 para hexadecimal (empacotamento)
 - [service_name.py](./client_server/service_name.py): Devolve o nome do serviço rodando no endereço e porta especificados
 - [get_http.py](./client_server/get_http.py): Solicita um arquivo de um servidor HTTP (GET)
+- [change_sock_buffsize.py](./client_server/change_sock_buffsize.py): Altera o valor padrão de buffer do socket utilizando `setsockopt()`
