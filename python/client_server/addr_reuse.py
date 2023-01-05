@@ -10,11 +10,15 @@ import sys
 import argparse
 
 HOST = "127.0.0.1"
-PORT = 53455
 
 def main():
+    # Command-line arguments
+    argp = argparse.ArgumentParser(prog="addr_reuse.py", description="address reuse example program")
+    argp.add_argument('-p', '--port', type=int, choices=range(1,65535), metavar='PORT', action="store", dest="port", default=0, required=False)
+    args = argp.parse_args()
+    PORT = args.port
     
-    # Creating file descriptor
+    # Creating file descriptor example
     try:
         sockfd = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     except socket.error as e:
@@ -39,7 +43,7 @@ def main():
     newfd.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     newfd.bind((HOST, PORT))
     newfd.listen(1)
-    print("[*] Listening on port {}".format(PORT))
+    print("[*] Listening on port {}".format(newfd.getsockname()[1]))
     while True:
         try:
             clientfd, clientaddr = newfd.accept()
