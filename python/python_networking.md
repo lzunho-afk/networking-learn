@@ -2,7 +2,7 @@
 
 ## Programação Cliente-Servidor - client_server
 
-Nessa seção são abordados conteúdos voltados para os endereços do protocolo IP,
+Nessa seção são abordados conteúdos voltados para os endereços do protocolo IP e
 o endereçamento e a estrutura básica da comunicação cliente-servidor.
 
 Descrição dos scripts:
@@ -15,3 +15,4 @@ Descrição dos scripts:
 - [change_sock_buffsize.py](./client_server/change_sock_buffsize.py): Altera o valor padrão de buffer do socket utilizando `setsockopt()`, que recebe três argumentos de entrada, o `level` (constante do socket), o `optname` (nome da opção) e o `value` (valor correspondente).
 - [cg_blocking_mode.py](./client_server/cg_blocking_mode.py): Altera o modo do socket para `non-blocking`. A necessidade disso pode se dar pelo fato de que os sockets TCP são configurados por padrão em modo de bloqueio (`blocking`), o que significa que o controle não é retornado para o programa até que determinada operação tenha terminado.
 - [addr_reuse.py](./client_server/addr_reuse.py): Reusa o endereço utilizado (mesma porta)
+- [ntp_print.py](./client_server/ntp_print.py): Utiliza o módulo ntplib para fazer uma requisição para um servidor NTP (Network Time Protocol).
