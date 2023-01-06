@@ -3,6 +3,7 @@
 # Lucas Zunho <lucas.zunho@zunho.com.br> (c) MIT
 
 from time import ctime
+import socket
 import ntplib
 import sys
 import argparse

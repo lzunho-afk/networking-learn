@@ -16,3 +16,4 @@ Descrição dos scripts:
 - [cg_blocking_mode.py](./client_server/cg_blocking_mode.py): Altera o modo do socket para `non-blocking`. A necessidade disso pode se dar pelo fato de que os sockets TCP são configurados por padrão em modo de bloqueio (`blocking`), o que significa que o controle não é retornado para o programa até que determinada operação tenha terminado.
 - [addr_reuse.py](./client_server/addr_reuse.py): Reusa o endereço utilizado (mesma porta)
 - [ntp_print.py](./client_server/ntp_print.py): Utiliza o módulo ntplib para fazer uma requisição para um servidor NTP (Network Time Protocol).
+- [echo_server.py](./client_server/echo_server.py) / [echo_client.py](./client_server/echo_client.py): Cliente e Servidor simples - Exemplo mais clássico de client-server
