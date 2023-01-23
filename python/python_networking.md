@@ -2,11 +2,6 @@
 
 ## Programação Cliente-Servidor - client_server
 
-Nessa seção são abordados conteúdos voltados para os endereços do protocolo IP e
-o endereçamento e a estrutura básica da comunicação cliente-servidor.
-
-Descrição dos scripts:
-
 - [hostname.py](./client_server/hostname.py): Apresenta o nome da máquina rodando a instância.
 - [external_host_addr.py](./client_server/external_host_addr.py): Apresenta o endereço IP a partir de um hostname.
 - [ip_convert.py](./client_server/ip_convert.py): Converte o endereço de IPv4 para hexadecimal (empacotamento).
@@ -17,3 +12,7 @@ Descrição dos scripts:
 - [addr_reuse.py](./client_server/addr_reuse.py): Reusa o endereço utilizado (mesma porta)
 - [ntp_print.py](./client_server/ntp_print.py): Utiliza o módulo ntplib para fazer uma requisição para um servidor NTP (Network Time Protocol).
 - [echo_server.py](./client_server/echo_server.py) / [echo_client.py](./client_server/echo_client.py): Cliente e Servidor simples - Exemplo mais clássico de client-server
+
+## Multiplexing - Transmissão Simuntânea (I/O
+
+- [echo_multiclient_server.py](./multiplexing/echo_multiclient_server.py): Servidor ECHO com suporte para multiplos clientes através do método "ForkingMixIn".
