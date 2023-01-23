@@ -15,4 +15,5 @@
 
 ## Multiplexing - Transmissão Simuntânea (I/O
 
-- [echo_multiclient_server.py](./multiplexing/echo_multiclient_server.py): Servidor ECHO com suporte para multiplos clientes através do método "ForkingMixIn".
+- [echo_multiclient_server.py](./multiplexing/echo_multiclient_server.py): Servidor ECHO com suporte para multiplos clientes através do método "ForkingMixIn" (atuante de mesmo processo).
+- [echo_multiclient_server_multithreaded.py](./multiplexing/echo_multiclient_server_multithreaded.py): Mesma coisa que o exemplo anterior, entretanto aplica uma lógica multi-thread, o que evita a complexidade desnecessária da comunicação de multiplos processos.
