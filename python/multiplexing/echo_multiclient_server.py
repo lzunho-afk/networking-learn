@@ -9,9 +9,9 @@ import argparse
 import socketserver
 
 HOST = '127.0.0.1'
-PORT = 0
-BUFFERSIZE = 1024
-MSG = 'Python programming ECHO! -- default msg...'
+PORT = None
+BUFFERSIZE = None
+MSG = None
 
 class ForkClient():
     """ Forking server client """
@@ -57,6 +57,18 @@ class ForkServer(socketserver.ForkingMixIn, socketserver.TCPServer, ):
     pass
 
 def main():
+    global MSG, BUFFERSIZE, PORT
+    # Commandline arguments
+    argp = argparse.ArgumentParser(prog="echo_multiclient_server.py", description="Simple ECHO server/client example")
+    argp.add_argument('-m', '--msg', '--message', action='store', dest='msg', help='ECHO message string', default="Python programming ECHO! -- default msg")
+    argp.add_argument('-p', '--port', type=int, choices=range(1,65535), metavar='PORT', action='store', dest='port', help='ECHO server port number', default=0)
+    argp.add_argument('-b', '--buffsize', type=int, action='store', dest='buffsize', help='ECHO buffer size', default=1024)
+    args = argp.parse_args()
+    MSG = args.msg
+    BUFFERSIZE = args.buffsize
+    PORT = args.port
+
+    # Server Startup
     server = ForkServer((HOST, PORT), ServerRequestHandler)
     ip, port = server.server_address
     server_thread = threading.Thread(target=server.serve_forever)
@@ -64,7 +76,7 @@ def main():
     server_thread.start()
     print("[App] Starting server loop on PID {}...".format(os.getpid()))
 
-    # Client
+    # Client Launch
     client = ForkClient((ip, port))
     client.run()
 
